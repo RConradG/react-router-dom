@@ -1,4 +1,6 @@
 // src/components/PokemonList/PokemonList.jsx
+import { Link } from 'react-router';
+
 
 const PokemonList = (props) => {
   return (
@@ -6,7 +8,11 @@ const PokemonList = (props) => {
       <h2>Pokemon</h2>
       <ul>
         {props.pokemon.map((currentPokemon) => (
-          <li key={currentPokemon.name}>{currentPokemon.name}</li>
+          <li key={currentPokemon._id}>
+            <Link to={`/pokemon/${currentPokemon._id}`}>
+              {currentPokemon.name}
+            </Link>
+          </li>
         ))}
       </ul>
     </>
