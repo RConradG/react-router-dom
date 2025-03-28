@@ -6,9 +6,7 @@ const PokemonList = (props) => {
       <h2>Pokemon</h2>
       <ul>
         {props.pokemon.map((currentPokemon) => (
-          <li key={currentPokemon.name}>
-            {currentPokemon.name}
-          </li>
+          <li key={currentPokemon.name}>{currentPokemon.name}</li>
         ))}
       </ul>
     </>
